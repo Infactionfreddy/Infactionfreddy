@@ -43,14 +43,18 @@ export async function fetchProfile(login, token, cfg = {}) {
   const excludeRepos = new Set((cfg.excludeRepos || []).map((s) => s.toLowerCase()));
   const excludeLangs = new Set((cfg.excludeLanguages || []).map((s) => s.toLowerCase()));
 
-  // Language bytes across owned public repos.
+  // Language share across owned public repos.
+  // "perRepo" (default): every repo counts equally, so one huge vendored
+  // codebase cannot drown out the rest. "bytes": raw byte totals.
+  const perRepo = (cfg.languageWeighting || 'perRepo') === 'perRepo';
   const langMap = new Map();
   for (const r of repos) {
     if (excludeRepos.has(r.name.toLowerCase())) continue;
-    for (const e of r.languages.edges) {
-      if (excludeLangs.has(e.node.name.toLowerCase())) continue;
+    const edges = r.languages.edges.filter((e) => !excludeLangs.has(e.node.name.toLowerCase()));
+    const total = edges.reduce((a, e) => a + e.size, 0) || 1;
+    for (const e of edges) {
       const cur = langMap.get(e.node.name) || { name: e.node.name, color: e.node.color, size: 0 };
-      cur.size += e.size;
+      cur.size += perRepo ? Math.round((e.size / total) * 1e6) : e.size;
       langMap.set(e.node.name, cur);
     }
   }

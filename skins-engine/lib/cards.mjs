@@ -226,13 +226,16 @@ export function stats(t, d) {
   s += `<text x="${cx}" y="${cy + 22}" text-anchor="middle" font-family="${MONO}" font-size="9.5" fill="${t.muted}">contrib / yr</text>`;
   s += `<text x="${cx}" y="${cy + r + 26}" text-anchor="middle" font-family="${MONO}" font-size="10.5" fill="${t.muted}">active <tspan fill="${t.text}" font-weight="700">${st.activeDays || 0}</tspan>/365 d</text>`;
 
+  // Show the five strongest non-zero figures; empty ones make way for others.
   const rows = [
     ['star', 'Stars earned', st.stars],
     ['commit', 'Commits · 12 mo', st.commits],
     ['pr', 'Pull requests', st.prs],
     ['issue', 'Issues', st.issues],
     ['repo', 'Contributed to', st.contributedTo],
-  ];
+    ['repo', 'Public repos', st.repos],
+    ['people', 'Followers', st.followers],
+  ].filter((r) => r[2] > 0).slice(0, 5);
   const rx = 188, rw = W - 24 - rx;
   rows.forEach(([ic, label, val], i) => {
     const y = T + 72 + i * 27;
