@@ -1,0 +1,45 @@
+name: Profile skins
+
+on:
+  schedule:
+    - cron: "17 4 * * *"      # daily, 04:17 UTC
+  workflow_dispatch:           # "Run workflow" button
+  push:
+    branches: [main]
+    paths:
+      - skins.config.json
+      - skins-engine/**
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-skins
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Render SVG cards
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          # Optional: a fine-grained PAT (read-only, "Public repositories")
+          # stored as secret SKINS_TOKEN — only needed for private contributions.
+          SKINS_TOKEN: ${{ secrets.SKINS_TOKEN }}
+        run: node skins-engine/build.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add skins
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "chore(skins): refresh profile cards [skip ci]"
+          git push

@@ -1,0 +1,118 @@
+{
+  "user": "Infactionfreddy",
+  "displayName": "Freddy",
+  "tagline": "Electrical engineering student from Berlin · embedded systems · CNC & 3D printing · broadcast and live-event tech.",
+  "location": "Berlin",
+  "stack": [
+    "C",
+    "C++",
+    "Python",
+    "ESP32",
+    "Klipper",
+    "KiCad",
+    "FPGA"
+  ],
+  "skins": [
+    "circuit-violet",
+    "fg",
+    "fg-light",
+    "aurora",
+    "broadcast",
+    "terminal",
+    "paper",
+    "circuit"
+  ],
+  "pins": [
+    "klipper-for-cnc",
+    "moonraker-for-cnc"
+  ],
+  "maxPins": 2,
+  "excludeLanguages": [
+    "HTML",
+    "CSS",
+    "Makefile",
+    "CMake",
+    "Dockerfile"
+  ],
+  "excludeRepos": [],
+  "includePrivate": false,
+  "stampText": "open source · engineering · broadcast · ",
+  "output": "skins",
+  "fg": {
+    "accent": "#8b5cf6",
+    "eyebrow": "Elektrotechnik Student",
+    "headline": [
+      "Engineering.",
+      "Software.",
+      "Design."
+    ],
+    "brandWord": "Production",
+    "ctaPrimary": "fg-production.tech",
+    "ctaGhost": "Über mich",
+    "website": "https://fg-production.tech",
+    "heroCode": [
+      "#include <Arduino.h>",
+      "",
+      "void setup() {",
+      "  pinMode(LED, OUTPUT);",
+      "}",
+      "",
+      "void loop() {",
+      "  digitalWrite(LED, HIGH);",
+      "}"
+    ],
+    "capabilities": [
+      {
+        "icon": "chip",
+        "title": "Elektrotechnik",
+        "items": [
+          "Schaltungsdesign",
+          "PCB Design",
+          "Embedded Systems",
+          "Mikrocontroller"
+        ]
+      },
+      {
+        "icon": "code",
+        "title": "Software",
+        "items": [
+          "Webentwicklung",
+          "Python",
+          "Automatisierung",
+          "APIs & Datenbanken"
+        ]
+      },
+      {
+        "icon": "wave",
+        "title": "Audio & Video",
+        "items": [
+          "Beschallung",
+          "Lichttechnik",
+          "Streaming",
+          "Veranstaltungstechnik"
+        ]
+      },
+      {
+        "icon": "box",
+        "title": "3D Druck & CAD",
+        "items": [
+          "3D Konstruktion",
+          "Prototyping",
+          "3D Druck",
+          "Rapid Manufacturing"
+        ]
+      },
+      {
+        "icon": "pen",
+        "title": "Design",
+        "items": [
+          "UI/UX Design",
+          "Grafik Design",
+          "Technische Visualisierung",
+          "Branding"
+        ]
+      }
+    ],
+    "tagline": "Ich entwickle technische Lösungen an der Schnittstelle von Elektrotechnik, Software, Medien- und Fertigungstechnik."
+  }
+}
