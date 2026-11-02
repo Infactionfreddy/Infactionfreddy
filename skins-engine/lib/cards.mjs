@@ -233,7 +233,7 @@ export function stats(t, d) {
     ['pr', 'Pull requests', st.prs],
     ['issue', 'Issues', st.issues],
     ['repo', 'Contributed to', st.contributedTo],
-    ['repo', 'Own repos', st.repos],
+    ['repo', 'Repositories', st.repos],
     ['people', 'Followers', st.followers],
   ].filter((r) => r[2] > 0).slice(0, 5);
   const rx = 188, rw = W - 24 - rx;
