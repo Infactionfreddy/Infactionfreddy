@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="445" height="215" viewBox="0 0 445 215" role="img" aria-label="Infactionfreddy top languages">
+<title>Infactionfreddy top languages</title>
+<style>
+
+    .tally{animation:tally 2.4s ease-in-out infinite}
+    @keyframes tally{0%,100%{opacity:1}50%{opacity:.35}}
+    .scan{animation:scan 6s linear infinite}
+    @keyframes scan{0%{transform:translateY(-40px)}100%{transform:translateY(420px)}}.sweep{animation:sweep 1.2s cubic-bezier(.2,.8,.2,1) both}@keyframes sweep{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<defs>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#ffffff" stroke-opacity=".025"/></pattern>
+  <linearGradient id="vu" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#30d158"/><stop offset=".62" stop-color="#30d158"/><stop offset=".63" stop-color="#ffb000"/><stop offset=".84" stop-color="#ffb000"/><stop offset=".85" stop-color="#ff3b30"/></linearGradient>
+  <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff3b30"/><stop offset="1" stop-color="#ff7a45"/></linearGradient>
+  <linearGradient id="scanG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".02"/></linearGradient>
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="clip"><rect width="445" height="215" rx="10"/></clipPath>
+</defs>
+<g clip-path="url(#clip)">
+  <rect width="445" height="215" fill="#0b0b0d"/>
+  <rect width="445" height="215" fill="url(#grid)"/>
+  <rect class="scan" x="0" y="0" width="445" height="40" fill="url(#scanG)"/>
+  <rect x="0" y="0" width="445" height="3" fill="url(#acc)"/>
+</g>
+
+<rect x=".5" y=".5" width="444" height="214" rx="9.5" fill="none" stroke="#26262c"/>
+<rect x="24" y="25" width="9" height="9" rx="1.5" fill="#ff3b30" class="tally" filter="url(#glow)"/>
+<text x="40" y="34" font-family="'JetBrains Mono','SF Mono','Cascadia Code',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="700" letter-spacing="1.4" fill="#8d8d96">CAM 2 · LANGUAGES</text><defs><clipPath id="barclip"><rect x="24" y="56" width="397" height="10" rx="2"/></clipPath></defs><rect x="24" y="56" width="397" height="10" rx="5" fill="#1d1d22"/><g clip-path="url(#barclip)" class="sweep"><rect x="24.00" y="56" width="384.32" height="10" fill="#555555"/><rect x="410.32" y="56" width="5.93" height="10" fill="#3572A5"/><rect x="418.24" y="56" width="0.00" height="10" fill="#f34b7d"/><rect x="420.05" y="56" width="0.00" height="10" fill="#f1e05a"/><rect x="420.62" y="56" width="0.00" height="10" fill="#89e051"/><rect x="420.85" y="56" width="0.15" height="10" fill="#438eff"/></g><rect x="24" y="94" width="4" height="12" rx="1" fill="#555555"/><text x="42" y="104" font-family="'Inter','Segoe UI Variable','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#f4f4f5">C</text><text x="206.5" y="104" text-anchor="end" font-family="'JetBrains Mono','SF Mono','Cascadia Code',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" fill="#8d8d96">97.3%</text><rect x="222.5" y="94" width="4" height="12" rx="1" fill="#3572A5"/><text x="240.5" y="104" font-family="'Inter','Segoe UI Variable','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#f4f4f5">Python</text><text x="405" y="104" text-anchor="end" font-family="'JetBrains Mono','SF Mono','Cascadia Code',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" fill="#8d8d96">2.0%</text><rect x="24" y="128" width="4" height="12" rx="1" fill="#f34b7d"/><text x="42" y="138" font-family="'Inter','Segoe UI Variable','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#f4f4f5">C++</text><text x="206.5" y="138" text-anchor="end" font-family="'JetBrains Mono','SF Mono','Cascadia Code',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" fill="#8d8d96">0.5%</text><rect x="222.5" y="128" width="4" height="12" rx="1" fill="#f1e05a"/><text x="240.5" y="138" font-family="'Inter','Segoe UI Variable','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#f4f4f5">JavaScript</text><text x="405" y="138" text-anchor="end" font-family="'JetBrains Mono','SF Mono','Cascadia Code',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" fill="#8d8d96">0.1%</text><rect x="24" y="162" width="4" height="12" rx="1" fill="#89e051"/><text x="42" y="172" font-family="'Inter','Segoe UI Variable','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#f4f4f5">Shell</text><text x="206.5" y="172" text-anchor="end" font-family="'JetBrains Mono','SF Mono','Cascadia Code',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" fill="#8d8d96">0.1%</text><rect x="222.5" y="162" width="4" height="12" rx="1" fill="#438eff"/><text x="240.5" y="172" font-family="'Inter','Segoe UI Variable','Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#f4f4f5">Objective-C</text><text x="405" y="172" text-anchor="end" font-family="'JetBrains Mono','SF Mono','Cascadia Code',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" fill="#8d8d96">0.0%</text>
+
+</svg>

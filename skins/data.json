@@ -1,0 +1,333 @@
+{
+  "login": "Infactionfreddy",
+  "name": "Freddy",
+  "bio": "Elektrotechnic student out BERLIN ",
+  "location": "Berlin",
+  "createdAt": "2020-05-28T16:15:12Z",
+  "stats": {
+    "stars": 0,
+    "repos": 12,
+    "followers": 1,
+    "commits": 10,
+    "prs": 9,
+    "issues": 12,
+    "contributedTo": 0,
+    "totalContributions": 19,
+    "activeDays": 8,
+    "currentStreak": 1,
+    "longestStreak": 2
+  },
+  "languages": [
+    {
+      "name": "C",
+      "color": "#555555",
+      "size": 213402420
+    },
+    {
+      "name": "Python",
+      "color": "#3572A5",
+      "size": 4378943
+    },
+    {
+      "name": "C++",
+      "color": "#f34b7d",
+      "size": 997946
+    },
+    {
+      "name": "JavaScript",
+      "color": "#f1e05a",
+      "size": 313298
+    },
+    {
+      "name": "Shell",
+      "color": "#89e051",
+      "size": 131572
+    },
+    {
+      "name": "Objective-C",
+      "color": "#438eff",
+      "size": 80595
+    },
+    {
+      "name": "Swift",
+      "color": "#F05138",
+      "size": 71465
+    },
+    {
+      "name": "Assembly",
+      "color": "#6E4C13",
+      "size": 63025
+    },
+    {
+      "name": "PHP",
+      "color": "#4F5D95",
+      "size": 10901
+    },
+    {
+      "name": "Batchfile",
+      "color": "#C1F12E",
+      "size": 9439
+    },
+    {
+      "name": "G-code",
+      "color": "#D08CF2",
+      "size": 8821
+    },
+    {
+      "name": "PowerShell",
+      "color": "#012456",
+      "size": 6690
+    },
+    {
+      "name": "Starlark",
+      "color": "#76d275",
+      "size": 4497
+    }
+  ],
+  "weeks": [
+    {
+      "start": "2025-11-02",
+      "count": 1
+    },
+    {
+      "start": "2025-11-09",
+      "count": 0
+    },
+    {
+      "start": "2025-11-16",
+      "count": 0
+    },
+    {
+      "start": "2025-11-23",
+      "count": 0
+    },
+    {
+      "start": "2025-11-30",
+      "count": 0
+    },
+    {
+      "start": "2025-12-07",
+      "count": 8
+    },
+    {
+      "start": "2025-12-14",
+      "count": 0
+    },
+    {
+      "start": "2025-12-21",
+      "count": 0
+    },
+    {
+      "start": "2025-12-28",
+      "count": 0
+    },
+    {
+      "start": "2026-01-04",
+      "count": 4
+    },
+    {
+      "start": "2026-01-11",
+      "count": 0
+    },
+    {
+      "start": "2026-01-18",
+      "count": 0
+    },
+    {
+      "start": "2026-01-25",
+      "count": 0
+    },
+    {
+      "start": "2026-02-01",
+      "count": 0
+    },
+    {
+      "start": "2026-02-08",
+      "count": 0
+    },
+    {
+      "start": "2026-02-15",
+      "count": 0
+    },
+    {
+      "start": "2026-02-22",
+      "count": 0
+    },
+    {
+      "start": "2026-03-01",
+      "count": 0
+    },
+    {
+      "start": "2026-03-08",
+      "count": 0
+    },
+    {
+      "start": "2026-03-15",
+      "count": 0
+    },
+    {
+      "start": "2026-03-22",
+      "count": 0
+    },
+    {
+      "start": "2026-03-29",
+      "count": 0
+    },
+    {
+      "start": "2026-04-05",
+      "count": 0
+    },
+    {
+      "start": "2026-04-12",
+      "count": 0
+    },
+    {
+      "start": "2026-04-19",
+      "count": 0
+    },
+    {
+      "start": "2026-04-26",
+      "count": 0
+    },
+    {
+      "start": "2026-05-03",
+      "count": 0
+    },
+    {
+      "start": "2026-05-10",
+      "count": 0
+    },
+    {
+      "start": "2026-05-17",
+      "count": 0
+    },
+    {
+      "start": "2026-05-24",
+      "count": 0
+    },
+    {
+      "start": "2026-05-31",
+      "count": 0
+    },
+    {
+      "start": "2026-06-07",
+      "count": 0
+    },
+    {
+      "start": "2026-06-14",
+      "count": 0
+    },
+    {
+      "start": "2026-06-21",
+      "count": 0
+    },
+    {
+      "start": "2026-06-28",
+      "count": 0
+    },
+    {
+      "start": "2026-07-05",
+      "count": 1
+    },
+    {
+      "start": "2026-07-12",
+      "count": 0
+    },
+    {
+      "start": "2026-07-19",
+      "count": 0
+    },
+    {
+      "start": "2026-07-26",
+      "count": 0
+    },
+    {
+      "start": "2026-08-02",
+      "count": 0
+    },
+    {
+      "start": "2026-08-09",
+      "count": 0
+    },
+    {
+      "start": "2026-08-16",
+      "count": 0
+    },
+    {
+      "start": "2026-08-23",
+      "count": 0
+    },
+    {
+      "start": "2026-08-30",
+      "count": 0
+    },
+    {
+      "start": "2026-09-06",
+      "count": 0
+    },
+    {
+      "start": "2026-09-13",
+      "count": 0
+    },
+    {
+      "start": "2026-09-20",
+      "count": 0
+    },
+    {
+      "start": "2026-09-27",
+      "count": 0
+    },
+    {
+      "start": "2026-10-04",
+      "count": 0
+    },
+    {
+      "start": "2026-10-11",
+      "count": 3
+    },
+    {
+      "start": "2026-10-18",
+      "count": 0
+    },
+    {
+      "start": "2026-10-25",
+      "count": 0
+    },
+    {
+      "start": "2026-11-01",
+      "count": 2
+    }
+  ],
+  "pins": [
+    {
+      "name": "klipper-for-cnc",
+      "description": "Klipper fork with CNC M-Code support (M0/M1/M2/M30) - ISO 6983 compliant program control",
+      "stars": 0,
+      "forks": 0,
+      "language": "C",
+      "languageColor": "#555555",
+      "updated": "2026-03-06T00:58:43Z"
+    },
+    {
+      "name": "moonraker-for-cnc",
+      "description": "Moonraker fork with CNC M30 handler - ISO 6983 compliant program control for repeated cycles",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "updated": "2025-12-14T21:47:34Z"
+    }
+  ],
+  "displayName": "Freddy",
+  "tagline": "Electrical engineering student from Berlin · embedded systems · CNC & 3D printing · broadcast and live-event tech.",
+  "stack": [
+    "C",
+    "C++",
+    "Python",
+    "ESP32",
+    "Klipper",
+    "KiCad",
+    "FPGA"
+  ],
+  "stampText": "open source · engineering · broadcast · "
+}
