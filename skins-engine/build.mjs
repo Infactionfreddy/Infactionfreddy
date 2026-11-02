@@ -50,7 +50,7 @@ else {
   // includePrivate: unset = automatic (on as soon as a SKINS_TOKEN secret exists)
   if (cfg.includePrivate === undefined || cfg.includePrivate === 'auto') cfg.includePrivate = !!personal;
   data = await fetchProfile(cfg.user, token, cfg);
-  console.log(`  data: ${data.stats.totalContributions} contributions, ${data.stats.repos} repos` + (cfg.includePrivate ? ' (incl. private)' : ' (public only — add a SKINS_TOKEN secret for private work)'));
+  console.log(`  data: ${data.stats.totalContributions} contributions, ${data.stats.repos} repos` + (cfg.includePrivate ? ' (incl. private)' : ' (public only)'));
 }
 
 // Config overrides win over API values.
