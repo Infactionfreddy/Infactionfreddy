@@ -6,14 +6,14 @@
   "createdAt": "2020-05-28T16:15:12Z",
   "stats": {
     "stars": 0,
-    "repos": 12,
+    "repos": 13,
     "followers": 1,
-    "commits": 11,
+    "commits": 13,
     "prs": 9,
     "issues": 12,
     "contributedTo": 0,
-    "totalContributions": 20,
-    "activeDays": 8,
+    "totalContributions": 23,
+    "activeDays": 10,
     "currentStreak": 1,
     "longestStreak": 2
   },
@@ -39,6 +39,11 @@
       "size": 1675364
     },
     {
+      "name": "Swift",
+      "color": "#F05138",
+      "size": 1293841
+    },
+    {
       "name": "C++",
       "color": "#f34b7d",
       "size": 1282902
@@ -51,12 +56,7 @@
     {
       "name": "Shell",
       "color": "#89e051",
-      "size": 325650
-    },
-    {
-      "name": "Swift",
-      "color": "#F05138",
-      "size": 301236
+      "size": 333045
     },
     {
       "name": "Batchfile",
@@ -283,11 +283,11 @@
     },
     {
       "start": "2026-10-11",
-      "count": 3
+      "count": 5
     },
     {
       "start": "2026-10-18",
-      "count": 0
+      "count": 1
     },
     {
       "start": "2026-10-25",
