@@ -1,17 +1,17 @@
 // Pulls everything the cards need from the GitHub GraphQL API in one query.
 
 const QUERY = `
-query($login: String!, $privacy: RepositoryPrivacy) {
+query($login: String!, $privacy: RepositoryPrivacy, $isFork: Boolean) {
   user(login: $login) {
     login name bio location createdAt
     followers { totalCount }
     pullRequests { totalCount }
     issues { totalCount }
     repositoriesContributedTo(first: 1, contributionTypes: [COMMIT, PULL_REQUEST, ISSUE, REPOSITORY]) { totalCount }
-    repositories(ownerAffiliations: OWNER, isFork: false, privacy: $privacy, first: 100, orderBy: {field: PUSHED_AT, direction: DESC}) {
+    repositories(ownerAffiliations: OWNER, isFork: $isFork, privacy: $privacy, first: 100, orderBy: {field: PUSHED_AT, direction: DESC}) {
       totalCount
       nodes {
-        name description stargazerCount forkCount pushedAt isArchived isPrivate
+        name description stargazerCount forkCount pushedAt isArchived isPrivate isFork
         primaryLanguage { name color }
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name color } } }
       }
@@ -34,7 +34,7 @@ export async function fetchProfile(login, token, cfg = {}) {
     headers: { Authorization: `bearer ${token}`, 'Content-Type': 'application/json', 'User-Agent': 'profile-skins' },
     // With a personal token (SKINS_TOKEN) private repos and private
     // contributions are included; their names never appear on a card.
-    body: JSON.stringify({ query: QUERY, variables: { login, privacy: cfg.includePrivate ? null : 'PUBLIC' } }),
+    body: JSON.stringify({ query: QUERY, variables: { login, privacy: cfg.includePrivate ? null : 'PUBLIC', isFork: cfg.includeForks ? null : false } }),
   });
   const json = await res.json();
   if (json.errors) throw new Error(JSON.stringify(json.errors));
@@ -103,7 +103,7 @@ export async function fetchProfile(login, token, cfg = {}) {
     location: u.location,
     createdAt: u.createdAt,
     stats: {
-      stars: publicRepos.reduce((a, r) => a + r.stargazerCount, 0),
+      stars: publicRepos.filter((r) => !r.isFork).reduce((a, r) => a + r.stargazerCount, 0),
       repos: u.repositories.totalCount,
       publicRepos: publicRepos.length,
       followers: u.followers.totalCount,

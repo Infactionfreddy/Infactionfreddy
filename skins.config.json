@@ -115,5 +115,6 @@
     ],
     "tagline": "Ich entwickle technische Lösungen an der Schnittstelle von Elektrotechnik, Software, Medien- und Fertigungstechnik."
   },
-  "timezone": "Europe/Berlin"
+  "timezone": "Europe/Berlin",
+  "includeForks": true
 }

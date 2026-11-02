@@ -31,6 +31,7 @@ Eigene, animierte SVG-Karten für dein GitHub-Profil. Acht Skins, live-Daten, ke
 | `pins` | Repos für die Repo-Karten; leer = deine angepinnten Repos |
 | `excludeLanguages` / `excludeRepos` | aus der Sprachstatistik ausnehmen |
 | `includePrivate` | `"auto"` (Standard): private Repos und Beiträge zählen mit, sobald das Secret `SKINS_TOKEN` existiert; `false` = nur öffentlich |
+| `includeForks` | `true`: öffentliche Forks zählen bei Repos und Sprachen mit (Sterne nur von eigenen Repos) |
 | `timezone` | Zeitzone für das Datum „SYNC“ auf der Karte |
 | `stampText` | Umlauftext des Stempels im `paper`-Skin |
 | `fg.accent` | Akzentfarbe des FG-Skins (Standard `#8b5cf6`, Lila) |
