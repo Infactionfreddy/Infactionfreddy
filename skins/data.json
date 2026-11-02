@@ -8,11 +8,11 @@
     "stars": 0,
     "repos": 12,
     "followers": 1,
-    "commits": 10,
+    "commits": 11,
     "prs": 9,
     "issues": 12,
     "contributedTo": 0,
-    "totalContributions": 19,
+    "totalContributions": 20,
     "activeDays": 8,
     "currentStreak": 1,
     "longestStreak": 2
@@ -21,67 +21,67 @@
     {
       "name": "C",
       "color": "#555555",
-      "size": 213402420
+      "size": 3375872
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "size": 4378943
-    },
-    {
-      "name": "C++",
-      "color": "#f34b7d",
-      "size": 997946
+      "size": 2894890
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "size": 313298
-    },
-    {
-      "name": "Shell",
-      "color": "#89e051",
-      "size": 131572
-    },
-    {
-      "name": "Objective-C",
-      "color": "#438eff",
-      "size": 80595
-    },
-    {
-      "name": "Swift",
-      "color": "#F05138",
-      "size": 71465
-    },
-    {
-      "name": "Assembly",
-      "color": "#6E4C13",
-      "size": 63025
+      "size": 1735679
     },
     {
       "name": "PHP",
       "color": "#4F5D95",
-      "size": 10901
+      "size": 1675364
+    },
+    {
+      "name": "C++",
+      "color": "#f34b7d",
+      "size": 1282902
+    },
+    {
+      "name": "Objective-C",
+      "color": "#438eff",
+      "size": 339721
+    },
+    {
+      "name": "Shell",
+      "color": "#89e051",
+      "size": 325650
+    },
+    {
+      "name": "Swift",
+      "color": "#F05138",
+      "size": 301236
     },
     {
       "name": "Batchfile",
       "color": "#C1F12E",
-      "size": 9439
-    },
-    {
-      "name": "G-code",
-      "color": "#D08CF2",
-      "size": 8821
+      "size": 38166
     },
     {
       "name": "PowerShell",
       "color": "#012456",
-      "size": 6690
+      "size": 30166
+    },
+    {
+      "name": "Assembly",
+      "color": "#6E4C13",
+      "size": 292
+    },
+    {
+      "name": "G-code",
+      "color": "#D08CF2",
+      "size": 41
     },
     {
       "name": "Starlark",
       "color": "#76d275",
-      "size": 4497
+      "size": 21
     }
   ],
   "weeks": [
@@ -295,7 +295,7 @@
     },
     {
       "start": "2026-11-01",
-      "count": 2
+      "count": 3
     }
   ],
   "pins": [
