@@ -7,12 +7,14 @@
   "stats": {
     "stars": 0,
     "repos": 15,
+    "publicRepos": 15,
     "followers": 1,
-    "commits": 16,
+    "commits": 17,
+    "privateContributions": 0,
     "prs": 11,
     "issues": 12,
     "contributedTo": 0,
-    "totalContributions": 30,
+    "totalContributions": 31,
     "activeDays": 14,
     "currentStreak": 1,
     "longestStreak": 4
@@ -305,7 +307,7 @@
     },
     {
       "start": "2026-11-01",
-      "count": 3
+      "count": 4
     }
   ],
   "pins": [
@@ -328,6 +330,7 @@
       "updated": "2025-12-14T21:47:34Z"
     }
   ],
+  "includesPrivate": false,
   "displayName": "Freddy",
   "tagline": "Electrical engineering student from Berlin · embedded systems · CNC & 3D printing · broadcast and live-event tech.",
   "stack": [
@@ -339,5 +342,6 @@
     "KiCad",
     "FPGA"
   ],
-  "stampText": "open source · engineering · broadcast · "
+  "stampText": "open source · engineering · broadcast · ",
+  "stamp": "02.11.2026"
 }
