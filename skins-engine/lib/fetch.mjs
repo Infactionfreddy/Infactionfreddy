@@ -1,17 +1,17 @@
 // Pulls everything the cards need from the GitHub GraphQL API in one query.
 
 const QUERY = `
-query($login: String!) {
+query($login: String!, $privacy: RepositoryPrivacy) {
   user(login: $login) {
     login name bio location createdAt
     followers { totalCount }
     pullRequests { totalCount }
     issues { totalCount }
     repositoriesContributedTo(first: 1, contributionTypes: [COMMIT, PULL_REQUEST, ISSUE, REPOSITORY]) { totalCount }
-    repositories(ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC, first: 100, orderBy: {field: PUSHED_AT, direction: DESC}) {
+    repositories(ownerAffiliations: OWNER, isFork: false, privacy: $privacy, first: 100, orderBy: {field: PUSHED_AT, direction: DESC}) {
       totalCount
       nodes {
-        name description stargazerCount forkCount pushedAt isArchived
+        name description stargazerCount forkCount pushedAt isArchived isPrivate
         primaryLanguage { name color }
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name color } } }
       }
@@ -32,7 +32,9 @@ export async function fetchProfile(login, token, cfg = {}) {
   const res = await fetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: { Authorization: `bearer ${token}`, 'Content-Type': 'application/json', 'User-Agent': 'profile-skins' },
-    body: JSON.stringify({ query: QUERY, variables: { login } }),
+    // With a personal token (SKINS_TOKEN) private repos and private
+    // contributions are included; their names never appear on a card.
+    body: JSON.stringify({ query: QUERY, variables: { login, privacy: cfg.includePrivate ? null : 'PUBLIC' } }),
   });
   const json = await res.json();
   if (json.errors) throw new Error(JSON.stringify(json.errors));
@@ -40,6 +42,7 @@ export async function fetchProfile(login, token, cfg = {}) {
   if (!u) throw new Error(`User ${login} not found`);
 
   const repos = u.repositories.nodes;
+  const publicRepos = repos.filter((r) => !r.isPrivate);
   const excludeRepos = new Set((cfg.excludeRepos || []).map((s) => s.toLowerCase()));
   const excludeLangs = new Set((cfg.excludeLanguages || []).map((s) => s.toLowerCase()));
 
@@ -81,16 +84,16 @@ export async function fetchProfile(login, token, cfg = {}) {
 
   let pins;
   if (cfg.pins?.length) {
-    pins = cfg.pins.map((n) => repos.find((r) => r.name.toLowerCase() === n.toLowerCase())).filter(Boolean).map(toRepo);
+    pins = cfg.pins.map((n) => publicRepos.find((r) => r.name.toLowerCase() === n.toLowerCase())).filter(Boolean).map(toRepo);
     const want = cfg.maxPins ?? 2;
     if (pins.length < want) {
       const have = new Set(pins.map((p) => p.name));
-      pins.push(...[...repos].filter((r) => !r.isArchived && !have.has(r.name)).sort((a, b) => b.stargazerCount - a.stargazerCount).slice(0, want - pins.length).map(toRepo));
+      pins.push(...[...publicRepos].filter((r) => !r.isArchived && !have.has(r.name)).sort((a, b) => b.stargazerCount - a.stargazerCount).slice(0, want - pins.length).map(toRepo));
     }
   } else if (u.pinnedItems.nodes.length) {
     pins = u.pinnedItems.nodes.map(toRepo);
   } else {
-    pins = [...repos].filter((r) => !r.isArchived).sort((a, b) => b.stargazerCount - a.stargazerCount).slice(0, 2).map(toRepo);
+    pins = [...publicRepos].filter((r) => !r.isArchived).sort((a, b) => b.stargazerCount - a.stargazerCount).slice(0, 2).map(toRepo);
   }
 
   return {
@@ -100,10 +103,12 @@ export async function fetchProfile(login, token, cfg = {}) {
     location: u.location,
     createdAt: u.createdAt,
     stats: {
-      stars: repos.reduce((a, r) => a + r.stargazerCount, 0),
+      stars: publicRepos.reduce((a, r) => a + r.stargazerCount, 0),
       repos: u.repositories.totalCount,
+      publicRepos: publicRepos.length,
       followers: u.followers.totalCount,
-      commits: u.contributionsCollection.totalCommitContributions + (cfg.includePrivate ? u.contributionsCollection.restrictedContributionsCount : 0),
+      commits: u.contributionsCollection.totalCommitContributions,
+      privateContributions: u.contributionsCollection.restrictedContributionsCount,
       prs: u.pullRequests.totalCount,
       issues: u.issues.totalCount,
       contributedTo: u.repositoriesContributedTo.totalCount,
@@ -115,6 +120,7 @@ export async function fetchProfile(login, token, cfg = {}) {
     languages,
     weeks,
     pins,
+    includesPrivate: !!cfg.includePrivate,
   };
 }
 

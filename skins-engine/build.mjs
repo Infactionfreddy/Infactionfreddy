@@ -45,8 +45,12 @@ const wanted = (cfg.skins === 'all' || !cfg.skins ? ALL : cfg.skins).filter((s) 
 let data;
 if (flag('--demo')) data = demoData(cfg);
 else {
-  const token = process.env.SKINS_TOKEN || process.env.GITHUB_TOKEN;
+  const personal = process.env.SKINS_TOKEN;
+  const token = personal || process.env.GITHUB_TOKEN;
+  // includePrivate: unset = automatic (on as soon as a SKINS_TOKEN secret exists)
+  if (cfg.includePrivate === undefined || cfg.includePrivate === 'auto') cfg.includePrivate = !!personal;
   data = await fetchProfile(cfg.user, token, cfg);
+  console.log(`  data: ${data.stats.totalContributions} contributions, ${data.stats.repos} repos` + (cfg.includePrivate ? ' (incl. private)' : ' (public only — add a SKINS_TOKEN secret for private work)'));
 }
 
 // Config overrides win over API values.
@@ -56,6 +60,7 @@ data.location = cfg.location ?? data.location;
 data.stack = cfg.stack || data.languages.slice(0, 6).map((l) => l.name);
 data.stampText = cfg.stampText;
 data.generatedAt = new Date().toISOString();
+data.stamp = new Intl.DateTimeFormat('de-DE', { timeZone: cfg.timezone || 'Europe/Berlin', day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date());
 
 const written = [];
 for (const id of wanted) {

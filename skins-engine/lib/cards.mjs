@@ -188,7 +188,7 @@ function bannerArt(t, d, W, H, T) {
     s += `<rect x="${cx0}" y="${cy0}" width="${cw}" height="${ch}" rx="6" fill="#0b0f0e" stroke="#25332f"/>`;
     s += `<circle cx="${cx0 + 14}" cy="${cy0 + 14}" r="4" fill="#1a2421"/>`;
     s += `<text x="${cx0 + cw / 2}" y="${cy0 + ch / 2 - 4}" text-anchor="middle" font-family="${MONO}" font-size="13" font-weight="700" fill="#cfe9e1">${esc(truncate(d.login.toUpperCase(), cw - 20, 13, 'mono'))}</text>`;
-    s += `<text x="${cx0 + cw / 2}" y="${cy0 + ch / 2 + 14}" text-anchor="middle" font-family="${MONO}" font-size="10" fill="#5f7d74">${esc(String(new Date(d.generatedAt).getFullYear()))}-${String(new Date(d.generatedAt).getMonth() + 1).padStart(2, '0')} · OSS</text>`;
+    s += `<text x="${cx0 + cw / 2}" y="${cy0 + ch / 2 + 14}" text-anchor="middle" font-family="${MONO}" font-size="10" fill="#5f7d74">SYNC ${esc(d.stamp || '')}</text>`;
     s += `<circle cx="${cx0 + cw - 16}" cy="${cy0 + ch - 16}" r="4" fill="${t.accent}" class="led" filter="url(#glow)"/>`;
     s += `<text x="${cx0 - 8}" y="${cy0 - 20}" font-family="${MONO}" font-size="10" fill="#4f8a7a">U0</text>`;
     return s;
@@ -233,7 +233,7 @@ export function stats(t, d) {
     ['pr', 'Pull requests', st.prs],
     ['issue', 'Issues', st.issues],
     ['repo', 'Contributed to', st.contributedTo],
-    ['repo', 'Public repos', st.repos],
+    ['repo', 'Own repos', st.repos],
     ['people', 'Followers', st.followers],
   ].filter((r) => r[2] > 0).slice(0, 5);
   const rx = 188, rw = W - 24 - rx;

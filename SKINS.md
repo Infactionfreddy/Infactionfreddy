@@ -18,7 +18,7 @@ Eigene, animierte SVG-Karten für dein GitHub-Profil. Acht Skins, live-Daten, ke
 1. Profil-Repository anlegen: **`Infactionfreddy/Infactionfreddy`** (öffentlich, Name = Benutzername).
 2. Den Inhalt dieses Ordners ins Repo kopieren (inkl. `.github/` und `skins-engine/`) und pushen.
 3. Im Repo: **Settings → Actions → General → Workflow permissions → „Read and write permissions“**.
-4. **Actions → Profile skins → Run workflow**. Danach liegen die Karten in `skins/<skin>/` und werden täglich aktualisiert.
+4. **Actions → Profile skins → Run workflow**. Danach liegen die Karten in `skins/<skin>/` und werden alle 3 Stunden aktualisiert.
 5. Fertig — `README.md` zeigt das Profil. Skin wechseln: im README `circuit-violet` durch einen anderen Skin-Namen ersetzen.
 
 ## Anpassen — `skins.config.json`
@@ -30,14 +30,19 @@ Eigene, animierte SVG-Karten für dein GitHub-Profil. Acht Skins, live-Daten, ke
 | `skins` | welche Skins gerendert werden (`"all"` = alle) |
 | `pins` | Repos für die Repo-Karten; leer = deine angepinnten Repos |
 | `excludeLanguages` / `excludeRepos` | aus der Sprachstatistik ausnehmen |
-| `includePrivate` | private Commits mitzählen (braucht `SKINS_TOKEN`) |
+| `includePrivate` | `"auto"` (Standard): private Repos und Beiträge zählen mit, sobald das Secret `SKINS_TOKEN` existiert; `false` = nur öffentlich |
+| `timezone` | Zeitzone für das Datum „SYNC“ auf der Karte |
 | `stampText` | Umlauftext des Stempels im `paper`-Skin |
 | `fg.accent` | Akzentfarbe des FG-Skins (Standard `#8b5cf6`, Lila) |
 | `fg.eyebrow`, `fg.headline`, `fg.ctaPrimary`, `fg.ctaGhost` | Texte im FG-Banner |
 | `fg.heroCode` | Code-Zeilen im Hintergrund des Banners |
 | `fg.capabilities` | die fünf Kompetenz-Spalten (Icons: chip, code, wave, box, pen) |
 
-**Private Beiträge:** Fine-grained Token mit Lesezugriff erstellen, als Secret `SKINS_TOKEN` im Profil-Repo speichern, `includePrivate: true` setzen.
+**Private Arbeit einbeziehen:**
+1. github.com/settings/personal-access-tokens → *Generate new token* (fine-grained), Ablauf z. B. 1 Jahr.
+2. *Repository access:* All repositories. *Permissions → Repository:* Contents = Read-only, Metadata = Read-only. Sonst nichts.
+3. Token kopieren → im Profil-Repo *Settings → Secrets and variables → Actions → New repository secret*, Name `SKINS_TOKEN`.
+4. Workflow einmal starten. Private Repos zählen dann bei Sprachen, Repos und Aktivität mit, ihre Namen erscheinen nirgends.
 
 ## Lokal testen
 
