@@ -6,39 +6,44 @@
   "createdAt": "2020-05-28T16:15:12Z",
   "stats": {
     "stars": 0,
-    "repos": 15,
-    "publicRepos": 15,
+    "repos": 37,
+    "publicRepos": 37,
     "followers": 1,
-    "commits": 17,
+    "commits": 18,
     "privateContributions": 0,
     "prs": 11,
     "issues": 12,
     "contributedTo": 0,
-    "totalContributions": 31,
+    "totalContributions": 32,
     "activeDays": 14,
     "currentStreak": 1,
     "longestStreak": 4
   },
   "languages": [
     {
-      "name": "Python",
-      "color": "#3572A5",
-      "size": 3855225
-    },
-    {
       "name": "C",
       "color": "#555555",
-      "size": 3375872
+      "size": 7327559
+    },
+    {
+      "name": "Python",
+      "color": "#3572A5",
+      "size": 7125360
+    },
+    {
+      "name": "C++",
+      "color": "#f34b7d",
+      "size": 6866485
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "size": 2021034
+      "size": 3453346
     },
     {
       "name": "PHP",
       "color": "#4F5D95",
-      "size": 1675364
+      "size": 2835471
     },
     {
       "name": "Swift",
@@ -46,19 +51,24 @@
       "size": 1293841
     },
     {
-      "name": "C++",
-      "color": "#f34b7d",
-      "size": 1282902
+      "name": "Shell",
+      "color": "#89e051",
+      "size": 1188569
+    },
+    {
+      "name": "Rust",
+      "color": "#dea584",
+      "size": 978928
     },
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "size": 579589
+      "size": 886501
     },
     {
-      "name": "Shell",
-      "color": "#89e051",
-      "size": 436327
+      "name": "Vue",
+      "color": "#41b883",
+      "size": 692102
     },
     {
       "name": "Objective-C",
@@ -66,34 +76,94 @@
       "size": 339721
     },
     {
+      "name": "QML",
+      "color": "#44a51c",
+      "size": 268802
+    },
+    {
+      "name": "Hack",
+      "color": "#878787",
+      "size": 239838
+    },
+    {
+      "name": "SCSS",
+      "color": "#c6538c",
+      "size": 227773
+    },
+    {
       "name": "Svelte",
       "color": "#ff3e00",
       "size": 71438
     },
     {
-      "name": "Batchfile",
-      "color": "#C1F12E",
-      "size": 38166
+      "name": "Ruby",
+      "color": "#701516",
+      "size": 59855
     },
     {
       "name": "PowerShell",
       "color": "#012456",
-      "size": 30166
+      "size": 56209
+    },
+    {
+      "name": "Batchfile",
+      "color": "#C1F12E",
+      "size": 38575
+    },
+    {
+      "name": "QMake",
+      "color": null,
+      "size": 17927
+    },
+    {
+      "name": "Perl",
+      "color": "#0298c3",
+      "size": 8726
+    },
+    {
+      "name": "Linker Script",
+      "color": null,
+      "size": 6463
+    },
+    {
+      "name": "Jupyter Notebook",
+      "color": "#DA5B0B",
+      "size": 5740
+    },
+    {
+      "name": "Prolog",
+      "color": "#74283c",
+      "size": 4994
     },
     {
       "name": "Assembly",
       "color": "#6E4C13",
-      "size": 292
+      "size": 2691
+    },
+    {
+      "name": "Roff",
+      "color": "#ecdebe",
+      "size": 2003
+    },
+    {
+      "name": "Yacc",
+      "color": "#4B6C4B",
+      "size": 872
+    },
+    {
+      "name": "Objective-C++",
+      "color": "#6866fb",
+      "size": 85
     },
     {
       "name": "G-code",
       "color": "#D08CF2",
-      "size": 41
+      "size": 82
     },
     {
       "name": "Starlark",
       "color": "#76d275",
-      "size": 21
+      "size": 43
     }
   ],
   "weeks": [
@@ -307,7 +377,7 @@
     },
     {
       "start": "2026-11-01",
-      "count": 4
+      "count": 5
     }
   ],
   "pins": [
