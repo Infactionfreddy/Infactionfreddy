@@ -6,32 +6,32 @@
   "createdAt": "2020-05-28T16:15:12Z",
   "stats": {
     "stars": 0,
-    "repos": 13,
+    "repos": 15,
     "followers": 1,
-    "commits": 13,
-    "prs": 9,
+    "commits": 16,
+    "prs": 11,
     "issues": 12,
     "contributedTo": 0,
-    "totalContributions": 23,
-    "activeDays": 10,
+    "totalContributions": 30,
+    "activeDays": 14,
     "currentStreak": 1,
-    "longestStreak": 2
+    "longestStreak": 4
   },
   "languages": [
+    {
+      "name": "Python",
+      "color": "#3572A5",
+      "size": 3855225
+    },
     {
       "name": "C",
       "color": "#555555",
       "size": 3375872
     },
     {
-      "name": "Python",
-      "color": "#3572A5",
-      "size": 2894890
-    },
-    {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "size": 1735679
+      "size": 2021034
     },
     {
       "name": "PHP",
@@ -49,14 +49,24 @@
       "size": 1282902
     },
     {
+      "name": "TypeScript",
+      "color": "#3178c6",
+      "size": 579589
+    },
+    {
+      "name": "Shell",
+      "color": "#89e051",
+      "size": 436327
+    },
+    {
       "name": "Objective-C",
       "color": "#438eff",
       "size": 339721
     },
     {
-      "name": "Shell",
-      "color": "#89e051",
-      "size": 333045
+      "name": "Svelte",
+      "color": "#ff3e00",
+      "size": 71438
     },
     {
       "name": "Batchfile",
@@ -223,7 +233,7 @@
     },
     {
       "start": "2026-06-28",
-      "count": 0
+      "count": 1
     },
     {
       "start": "2026-07-05",
@@ -231,7 +241,7 @@
     },
     {
       "start": "2026-07-12",
-      "count": 0
+      "count": 6
     },
     {
       "start": "2026-07-19",
