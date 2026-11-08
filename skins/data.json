@@ -15,7 +15,7 @@
     "issues": 12,
     "contributedTo": 0,
     "totalContributions": 34,
-    "activeDays": 15,
+    "activeDays": 14,
     "currentStreak": 0,
     "longestStreak": 4
   },
@@ -167,10 +167,6 @@
     }
   ],
   "weeks": [
-    {
-      "start": "2025-11-02",
-      "count": 1
-    },
     {
       "start": "2025-11-09",
       "count": 0
@@ -378,6 +374,10 @@
     {
       "start": "2026-11-01",
       "count": 7
+    },
+    {
+      "start": "2026-11-08",
+      "count": 0
     }
   ],
   "pins": [
@@ -413,5 +413,5 @@
     "FPGA"
   ],
   "stampText": "open source · engineering · broadcast · ",
-  "stamp": "07.11.2026"
+  "stamp": "08.11.2026"
 }
