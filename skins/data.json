@@ -6,29 +6,29 @@
   "createdAt": "2020-05-28T16:15:12Z",
   "stats": {
     "stars": 0,
-    "repos": 37,
-    "publicRepos": 37,
+    "repos": 36,
+    "publicRepos": 36,
     "followers": 1,
-    "commits": 20,
+    "commits": 21,
     "privateContributions": 0,
-    "prs": 11,
+    "prs": 23,
     "issues": 12,
     "contributedTo": 0,
-    "totalContributions": 34,
-    "activeDays": 14,
-    "currentStreak": 0,
+    "totalContributions": 45,
+    "activeDays": 15,
+    "currentStreak": 1,
     "longestStreak": 4
   },
   "languages": [
     {
-      "name": "C",
-      "color": "#555555",
-      "size": 7327559
-    },
-    {
       "name": "Python",
       "color": "#3572A5",
       "size": 7125360
+    },
+    {
+      "name": "C",
+      "color": "#555555",
+      "size": 6968516
     },
     {
       "name": "C++",
@@ -46,14 +46,14 @@
       "size": 2835471
     },
     {
-      "name": "Swift",
-      "color": "#F05138",
-      "size": 1293841
-    },
-    {
       "name": "Shell",
       "color": "#89e051",
-      "size": 1188569
+      "size": 1190702
+    },
+    {
+      "name": "Swift",
+      "color": "#F05138",
+      "size": 990472
     },
     {
       "name": "Rust",
@@ -69,11 +69,6 @@
       "name": "Vue",
       "color": "#41b883",
       "size": 692102
-    },
-    {
-      "name": "Objective-C",
-      "color": "#438eff",
-      "size": 339721
     },
     {
       "name": "QML",
@@ -201,7 +196,7 @@
     },
     {
       "start": "2026-01-04",
-      "count": 4
+      "count": 1
     },
     {
       "start": "2026-01-11",
@@ -377,7 +372,7 @@
     },
     {
       "start": "2026-11-08",
-      "count": 0
+      "count": 15
     }
   ],
   "pins": [
@@ -413,5 +408,5 @@
     "FPGA"
   ],
   "stampText": "open source · engineering · broadcast · ",
-  "stamp": "08.11.2026"
+  "stamp": "09.11.2026"
 }
